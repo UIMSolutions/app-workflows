@@ -1,2 +1,2 @@
-# Package 📦 apps.myname.controllers.actions
+# Package 📦 apps.workflows.controllers.actions
 

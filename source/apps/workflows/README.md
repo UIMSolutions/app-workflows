@@ -1,2 +1,2 @@
-# Package 📦 apps.myname
+# Package 📦 apps.workflows
 

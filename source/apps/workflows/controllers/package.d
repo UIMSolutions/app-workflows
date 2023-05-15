@@ -1,7 +1,7 @@
-module apps.myname.controllers;
+module apps.workflows.controllers;
 
 public { // Packages
-  import apps.myname.controllers.actions;
-  import apps.myname.controllers.components;
-  import apps.myname.controllers.pages;
+  import apps.workflows.controllers.actions;
+  import apps.workflows.controllers.components;
+  import apps.workflows.controllers.pages;
 }
