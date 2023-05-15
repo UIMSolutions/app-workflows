@@ -1,2 +1,2 @@
-# Package 📦 apps.myname.views
+# Package 📦 apps.workflows.views
 

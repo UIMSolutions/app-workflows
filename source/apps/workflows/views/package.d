@@ -1,6 +1,6 @@
-module apps.myname.views;
+module apps.workflows.views;
 
 public { // Packages
-  import apps.myname.views.actions;
-  import apps.myname.views.forms;
+  import apps.workflows.views.actions;
+  import apps.workflows.views.forms;
 }
