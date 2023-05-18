@@ -10,5 +10,8 @@ public { // required uim libraries
 
 public { // admin-workflows libraries
   import apps.workflows.controllers;
+  import apps.workflows.helpers;
+  import apps.workflows.routers;
+  import apps.workflows.tests;
   import apps.workflows.views;
 }
