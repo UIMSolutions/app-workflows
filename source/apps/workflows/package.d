@@ -3,7 +3,7 @@
   License: Subject to the terms of the Apache 2.0 license, as written in the included LICENSE.txt file.  
   Authors: Ozan Nurettin Süel (Sicherheitsschmiede)                                                      
 **********************************************************************************************************/
-module apps.myname;
+module apps.workflows;
 
 mixin(ImportPhobos!());
 
@@ -23,18 +23,18 @@ public import uim.servers;
 public import langs.javascript;
 
 public {
-  import apps.myname.controllers;
-  import apps.myname.helpers;
-  import apps.myname.routers;
-  import apps.myname.tests;
-  import apps.myname.views;
+  import apps.workflows.controllers;
+  import apps.workflows.helpers;
+  import apps.workflows.routers;
+  import apps.workflows.tests;
+  import apps.workflows.views;
 }
 
-DApp mynameApp;
+DApp workflowsApp;
 static this() {
-  mynameApp = App
-    .name("mynameApp")
-    .rootPath("/apps/myname")
+  workflowsApp = App
+    .name("workflowsApp")
+    .rootPath("/apps/workflows")
     .addRoute(Route("", HTTPMethod.GET, MYNAMEIndexPageController))
     .addRoute(Route("/", HTTPMethod.GET, MYNAMEIndexPageController));
 }
