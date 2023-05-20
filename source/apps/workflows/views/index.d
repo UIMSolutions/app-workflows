@@ -8,11 +8,11 @@ module apps.workflows.views.index;
 import apps.workflows;
 @safe:
 
-class DWFLIndexView : DView {
-  mixin(ViewThis!("WFLIndexView"));
+class DIndexView : DView {
+  mixin(ViewThis!("IndexView"));
 
   override DH5Obj[] toH5(STRINGAA options = null) {
-    debugMethodCall(moduleName!DWFLIndexView~":DWFLIndexView("~this.name~")::toH5");
+    debugMethodCall(moduleName!DIndexView~":DIndexView("~this.name~")::toH5");
     super.toH5(options);
 
     return [
@@ -20,4 +20,4 @@ class DWFLIndexView : DView {
     ].toH5;
   }
 }
-mixin(ViewCalls!("WFLIndexView"));
+mixin(ViewCalls!("IndexView"));

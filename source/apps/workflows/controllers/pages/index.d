@@ -8,14 +8,14 @@ module apps.workflows.controllers.pages.index;
 import apps.workflows;
 @safe:
 
-class DWFLIndexPageController : DAPPPageController {
-  mixin(ControllerThis!("WFLIndexPageController"));
+class DIndexPageController : DAPPPageController {
+  mixin(ControllerThis!("IndexPageController"));
 
   override void initialize(Json configSettings = Json(null)) {
     super.initialize(configSettings);
 
     this
-      .view(WFLIndexView(this));
+      .view(IndexView(this));
   }
 }
-mixin(ControllerCalls!("WFLIndexPageController"));
+mixin(ControllerCalls!("IndexPageController"));

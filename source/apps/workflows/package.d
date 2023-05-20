@@ -35,6 +35,6 @@ static this() {
     App
     .name("workflowsApp")
     .rootPath("/apps/workflows")
-    .addRoute(Route("", HTTPMethod.GET, WFLIndexPageController))
-    .addRoute(Route("/", HTTPMethod.GET, WFLIndexPageController)));
+    .addRoute(Route("", HTTPMethod.GET, IndexPageController))
+    .addRoute(Route("/", HTTPMethod.GET, IndexPageController)));
 }
