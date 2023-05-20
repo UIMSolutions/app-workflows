@@ -30,11 +30,11 @@ public {
   import apps.workflows.views;
 }
 
-DApp workflowsApp;
 static this() {
-  workflowsApp = App
+  AppRegistry.register("apps.workflows",  
+    App
     .name("workflowsApp")
     .rootPath("/apps/workflows")
-    .addRoute(Route("", HTTPMethod.GET, MYNAMEIndexPageController))
-    .addRoute(Route("/", HTTPMethod.GET, MYNAMEIndexPageController));
+    .addRoute(Route("", HTTPMethod.GET, WFLIndexPageController))
+    .addRoute(Route("/", HTTPMethod.GET, WFLIndexPageController)));
 }

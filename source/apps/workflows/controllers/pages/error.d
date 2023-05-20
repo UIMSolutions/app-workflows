@@ -8,14 +8,14 @@ module apps.workflows.controllers.pages.error;
 import apps.workflows;
 @safe:
 
-class DMYNAMEErrorPageController : DAPPPageController {
-  mixin(ControllerThis!("MYNAMEErrorPageController"));
+class DWFLErrorPageController : DAPPPageController {
+  mixin(ControllerThis!("WFLErrorPageController"));
 
   override void initialize(Json configSettings = Json(null)) {
     super.initialize(configSettings);
 
     this
-      .view(MYNAMEErrorView(this));
+      .view(WFLErrorView(this));
   }
 }
-mixin(ControllerCalls!("MYNAMEErrorPageController"));
+mixin(ControllerCalls!("WFLErrorPageController"));
