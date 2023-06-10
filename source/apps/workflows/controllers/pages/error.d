@@ -8,7 +8,7 @@ module apps.workflows.controllers.pages.error;
 import apps.workflows;
 @safe:
 
-class DWFLErrorPageController : DAPPPageController {
+class DWFLErrorPageController : DPageController {
   mixin(ControllerThis!("WFLErrorPageController"));
 
   override void initialize(Json configSettings = Json(null)) {
