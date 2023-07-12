@@ -32,9 +32,11 @@ public {
 
 static this() {
   AppRegistry.register("apps.workflows",  
-    App
-    .name("workflowsApp")
-    .rootPath("/apps/workflows")
-    .addRoute(Route("", HTTPMethod.GET, IndexPageController))
-    .addRoute(Route("/", HTTPMethod.GET, IndexPageController)));
+    App("workflowsApp", "/apps/workflows")
+      .importTranslations()
+      .addRoutes(
+        Route("", HTTPMethod.GET, IndexPageController),
+        Route("/", HTTPMethod.GET, IndexPageController)
+      )
+    );
 }
