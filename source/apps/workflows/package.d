@@ -7,8 +7,10 @@ module apps.workflows;
 
 mixin(ImportPhobos!());
 
-// Dub
-public import vibe.d;
+// External
+public {
+  import vibe.d;
+}
 
 // UIM
 public import uim.core;
@@ -31,12 +33,18 @@ public {
 }
 
 static this() {
-  AppRegistry.register("apps.workflows",  
-    App("workflowsApp", "/apps/workflows")
-      .importTranslations()
-      .addRoutes(
-        Route("", HTTPMethod.GET, IndexPageController),
-        Route("/", HTTPMethod.GET, IndexPageController)
-      )
+  auto myApp = App("workflowsApp", "apps/workflows");
+
+  with (myApp) {
+    importTranslations;
+    addControllers([
+      "wf.index": IndexPageController
+    ]);
+    addRoutes(
+      Route("", HTTPMethod.GET, controller("wf.index")),
+      Route("/", HTTPMethod.GET, controller("wf.index"))
     );
+  }
+
+  AppRegistry.register("apps.workflows", myApp);
 }
